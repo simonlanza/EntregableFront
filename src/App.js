@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// El componente App es el padre de:
+// - Cabecera
+// - Listado
+// ESTADO: App debe manejar en su estado un número para contabilizar el total de elementos comprados.
+// MÉTODOS: App debe tener un método para aumentar este número y que pueda ser ejecutado por su nieto Item.
+// PROPS: App deberá pasar por props lo necesario a sus componenetes internos.
+import React, {useState} from 'react';
+import Cabecera from './components/Cabecera';
+import Listado from './components/Listado';
+import { AppContainer } from './styles/styles';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [total, setTotal] = useState(0);
+
+    const aumentarTotal = () => {
+        setTotal(total + 1);
+    }
+
+    return (
+        <AppContainer>
+            <Cabecera productos={total}/>
+            <Listado aumentarTotal={aumentarTotal}/>
+        </AppContainer>
+    );
 }
 
 export default App;
