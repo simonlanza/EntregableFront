@@ -32,6 +32,9 @@ export const ListadoContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
+    @media (max-width: 950px) {
+        flex-wrap: wrap;
+    }
 `;
 
 export const ItemContainer = styled.div`
@@ -43,6 +46,12 @@ export const ItemContainer = styled.div`
     padding: 1rem;
     margin: 1rem;
     width: 30%;
+    @media (max-width: 950px) {
+        width: 40%;
+    }
+    @media (max-width: 700px) {
+        width: 90%;
+    }
     h3 {
         text-align: center;
         font-size: 1.2rem;
