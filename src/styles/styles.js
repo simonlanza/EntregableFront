@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const AppContainer = styled.div`
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    margin: 50px 75px 0;
+    border: 1px solid grey;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -19,6 +19,11 @@ export const CabeceraContainer = styled.div`
     border: 1px solid #e5e5e5;
     padding: 1rem;
     margin-bottom: 1rem;
+    
+        @media (max-width: 842px) {
+            text-align: center;
+        }
+    
     span {
         background-color: black;
         color: white;
@@ -32,7 +37,7 @@ export const ListadoContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
-    @media (max-width: 950px) {
+    @media (max-width: 1900px) {
         flex-wrap: wrap;
     }
 `;
@@ -41,15 +46,16 @@ export const ItemContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #ddd;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     padding: 1rem;
     margin: 1rem;
     width: 30%;
-    @media (max-width: 950px) {
+    @media (max-width: 1900px) {
         width: 40%;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 842px) {
         width: 90%;
     }
     h3 {
@@ -59,10 +65,16 @@ export const ItemContainer = styled.div`
     p {
         font-size: 1rem;
     }
+    h4 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin : 7px;
+    }
     h5 {
         font-size: 1rem;
         font-weight: bold;
         text-align: center;
+        margin: 7px;
         span {
             background-color: rgb(255, 178, 178);
             padding: 3px;
@@ -83,7 +95,7 @@ export const ProductButton = styled.button`
     margin: 0;
     cursor: pointer;
     &:disabled {
-        background-color: #e5e5e5;
+        background-color: rgb(255, 178, 178);
         cursor: not-allowed;
     }
 `;
