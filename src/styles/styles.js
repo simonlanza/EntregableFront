@@ -32,12 +32,12 @@ export const CabeceraContainer = styled.div`
     }
 `;
 
-export const ListadoContainer = styled.div`
+export const ListadoContainer = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
-    @media (max-width: 1900px) {
+    @media (max-width: 1500px) {
         flex-wrap: wrap;
     }
 `;
@@ -52,8 +52,9 @@ export const ItemContainer = styled.div`
     padding: 1rem;
     margin: 1rem;
     width: 30%;
-    @media (max-width: 1900px) {
+    @media (max-width: 1500px) {
         width: 40%;
+
     }
     @media (max-width: 842px) {
         width: 90%;
@@ -62,6 +63,9 @@ export const ItemContainer = styled.div`
         text-align: center;
         font-size: 1.2rem;
     }
+    img {@media (max-width: 1900px) {
+        width: 80%;
+    }}
     p {
         font-size: 1rem;
     }
