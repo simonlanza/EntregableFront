@@ -56,15 +56,18 @@ export const ItemContainer = styled.div`
     text-align: center;
     font-size: 1.2rem;
   }
-  p {
-    font-size: 1rem;
-  }
   h4 {
     font-size: 1.2rem;
     text-align: center;
     margin: 7px;
   }
-  h5 {
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const Stock = styled.h5`
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
@@ -76,12 +79,9 @@ export const ItemContainer = styled.div`
       color: rgb(155, 0, 0);
       border-radius: 3px;
     }
-  }
-  img {
-    width: 100%;
-    height: auto;
-  }
 `;
+    
+
 
 export const ProductButton = styled.button`
   background-color: #f5f5f5;

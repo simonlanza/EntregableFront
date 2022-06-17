@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ItemContainer, ProductButton } from "../styles/styles";
+import { ItemContainer, ProductButton, Stock } from "../styles/styles";
 
 const Item = ({
   aumentarTotal,
@@ -26,9 +26,9 @@ const Item = ({
       <h4>
         <span>{precio}</span>
       </h4>
-      <h5>
+      <Stock>
         Cantidad en stock: <span>{stock < 1 ? "Agotado" : stock}</span>
-      </h5>
+      </Stock>
       <ProductButton
         disabled={stock < 1}
         onClick={() => {
