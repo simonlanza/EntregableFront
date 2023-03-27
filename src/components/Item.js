@@ -35,7 +35,7 @@ const Item = ({
           comprar();
         }}
       >
-        {stock <= 0 ? "Sin Stock" : "Comprar"}
+        {stock <= 0 ? "Sin Stock" : " Comprar"}
       </ProductButton>
     </ItemContainer>
   );
